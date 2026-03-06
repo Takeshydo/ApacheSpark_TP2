@@ -43,7 +43,7 @@ public class DataEngine {
         System.out.println("=========================================");
 
         Dataset<Row> dfMap = dfFilter
-                .select("country", "purchase_amount", "customer_name")
+                .select("transaction_id","country", "purchase_amount", "customer_name", "customer_age", "clearence_level")
                         .filter(dfMySQL.col("country").isNotNull());
 
         System.out.println("=========================================");
